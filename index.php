@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Recomennded book</h1>
+<h1>Recommended book</h1>
 
 <?php 
 
@@ -16,22 +16,26 @@ $books = [
     [
         'name' =>   'Do Androids Dream of Electric Sheep',
         'author' =>   'Justin Dick',
-        'link' =>   'http://website.com'
+        'link' =>   'http://website.com',
+        'releaseYear' => '1723'
     ],
     [
         'name' =>  'Does Anep Eat?',
         'author' =>'Jimmy Jon',
-        'link' =>'http://website.com'
+        'link' =>'http://website.com',
+        'releaseYear' => '2024'
     ],
     [
         'name' => 'Can I read aloud?',
         'author' =>'Nota Name',
-        'link' =>'http://website.com'
+        'link' =>'http://website.com',
+        'releaseYear' => '1873'
     ],
     [
         'name' => 'Created name',
         'author' =>'Monkey Brain',
-        'link' =>'http://website.com'
+        'link' =>'http://website.com',
+        'releaseYear' => '1923'
     ],
 ];
 
@@ -39,8 +43,10 @@ $books = [
 
 <ul>
    <?php foreach ($books as $book) : ?>
-        <a href="<?= $book['link'] ?>">
+        <a href="<?= $book['link']; ?>">
             <li><?= $book['name']; ?></li>
+            <li><?= $book['author']; ?></li>
+            <li><?= $book['releaseYear'];?></li>
         </a>
     <?php endforeach; ?>
 
