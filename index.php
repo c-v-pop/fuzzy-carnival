@@ -8,29 +8,41 @@
 </head>
 <body>
 
-  <h1>Recomennded Books</h1>
-            
-        <?php 
+<h1>Recomennded book</h1>
 
-            $books = [
-                "Do Androids Dream of Electric Sheep",
-                "The Langolier",
-                "John Travolva",
-                "Ursu polar",
-                "Cine ce vrea"
-            ];
-        
-        ?>
+<?php 
 
+$books = [
+    [
+        'name' =>   'Do Androids Dream of Electric Sheep',
+        'author' =>   'Justin Dick',
+        'link' =>   'http://website.com'
+    ],
+    [
+        'name' =>  'Does Anep Eat?',
+        'author' =>'Jimmy Jon',
+        'link' =>'http://website.com'
+    ],
+    [
+        'name' => 'Can I read aloud?',
+        'author' =>'Nota Name',
+        'link' =>'http://website.com'
+    ],
+    [
+        'name' => 'Created name',
+        'author' =>'Monkey Brain',
+        'link' =>'http://website.com'
+    ],
+];
 
-                <ul>
-                    <?php foreach ($books as $name) : ?>
+?>
 
-                    <li> <?= $name ?> </li>
-                    <?php endforeach; ?>
-                </ul>
-
-
+<ul>
+   <?php foreach ($books as $book) : ?>
+        <a href="<?= $book['link'] ?>">
+            <li><?= $book['name']; ?></li>
+        </a>
+    <?php endforeach; ?>
 
 </body>
 </html>
