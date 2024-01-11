@@ -10,16 +10,10 @@
 <body>
 
     
-    <ul>
-        <?php foreach ($filteredBooks as $book) : ?>
-            <li>
-                <a href="<?= $book['purchaseUrl'] ?>">
-                    <?= $book['name']; ?> (<?= $book['releaseYear'] ?>) - By <?= $book['author'] ?>
-                </a>
-            </li>
+        <h1><?= $business['name']; ?></h1>
+        <?php foreach ($business['categories'] as $category) : ?>
+                <li><?= $category ?></li>
         <?php endforeach; ?>
-    </ul>
-
 
 </body>
 </html>
