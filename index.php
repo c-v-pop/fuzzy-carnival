@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
     <title>Demo</title>
 </head>
 
@@ -28,11 +29,13 @@
             ],
         ];
 
-        $filteredBooks = array_filter($books, function ($book) {
-            return $book['author'] === 'Andy Weir';
-        });
+
+       $filteredBooks = array_filter($books, function ($book) {
+        return $book['author'] === 'Philip K. Dick';
+       });
     ?>
 
+    
     <ul>
         <?php foreach ($filteredBooks as $book) : ?>
             <li>
