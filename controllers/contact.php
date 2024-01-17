@@ -1,5 +1,5 @@
 <?php
 
-$heading = 'Contact us';
+$heading = 'Contact Us';
 
 require "views/contact.view.php";
